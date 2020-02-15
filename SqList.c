@@ -1,4 +1,4 @@
-
+//ÏßÐÔ±í
 #include <stdio.h>
 #include <stdlib.h>
 #define LIST_INIT_SIZE 100
