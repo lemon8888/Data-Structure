@@ -19,8 +19,9 @@ int LinkListTraversal(LinkList *L); //遍历
 
 int main(){
     LinkList *L;
-    L=LinkListInit(10);
-    LinkListDelete(L,10);
+    L=LinkListInit(1);
+    LinkListDelete(L,1);
+    printf("%d",num);
     LinkListTraversal(L);
     return 0;
 }
@@ -29,8 +30,8 @@ LinkList* LinkListInit(int n){
     LinkList *node;
     head=(LinkList*)malloc(sizeof(LinkList));
     head->data=1;
+    head->next=NULL;
     end=head;
-    end->next=head;
     num++;
     for(int i=2;i<=n;i++){
         node=(LinkList*)malloc(sizeof(LinkList));
@@ -72,6 +73,14 @@ LinkList* LinkListDelete(LinkList *L,int n){
         j++;
     }
     if(n>num+1||j>n) return 0;
+    if(p->next==p){
+        free(p);
+        L=NULL;
+        head=NULL;
+        end=NULL;
+        num--;
+        return L;
+    }
     s=p->next;
     p->next=p->next->next;
     if(n==num){
@@ -82,6 +91,7 @@ LinkList* LinkListDelete(LinkList *L,int n){
 }
 
 int LinkListTraversal(LinkList *L){
+    if(L==NULL) return 0;
     LinkList *p;
     p=L;
     while(p->next!=NULL){
