@@ -110,7 +110,7 @@ int LinkListTraversal(LinkList *L){
     if(L==NULL) return 0;
     LinkList *p;
     p=L;
-    while(p->next!=NULL  ){
+    while(p->next!=NULL){
         printf("data:%d\n",p->data);
 		if(p->next != L){
 			p=p->next;
