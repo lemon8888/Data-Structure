@@ -63,7 +63,10 @@ void Caesar(DuLinkList *L,int i){
         }while(--i);
     }
     if(i<0){
-        do{
+       i=i-1;
+        (*L)=(*L)->next;
+        do
+        {
             (*L)=(*L)->prior;
         }while(++i);
     }
