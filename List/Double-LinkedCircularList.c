@@ -14,8 +14,8 @@ typedef struct DualNode{
     struct DualNode *next;
 }DualNode, *DuLinkList;
 
-Status DuLinkListInit(DuLinkList *L);
-void Caesar(DuLinkList *L,int i);
+Status DuLinkListInit(DuLinkList *L);//初始化字母表-双向循环链表
+void Caesar(DuLinkList *L,int i);//凯撒加密，移动字母表
 
 int main(){
     DuLinkList L;
