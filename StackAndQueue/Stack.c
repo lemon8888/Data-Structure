@@ -47,8 +47,7 @@ void StackInit(sqStack **s){
 }
 
 void StackPush(sqStack *s,ElemType data){
-    if(s->top-s->base == s->stacksize-1)
-	{
+    if(s->top-s->base == s->stacksize-1){
         s->base=(ElemType*)realloc(s->base,sizeof(ElemType)*(s->stacksize+Stack_Increment));
         if(!s->base) exit(0);
         s->stacksize=s->stacksize+Stack_Increment;
