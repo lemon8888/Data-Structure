@@ -17,6 +17,7 @@ void StackInit(sqStack **s);//初始化。注意函数值使用结构体的指�
 void StackPush(sqStack *s,ElemType data);//存入数据
 void StackPop(sqStack *s,ElemType *data);//取出数据
 void StackDestroy(sqStack *s);//销毁
+int StackLen(sqStack *s);//栈内数据个数
 
 int main(){
     sqStack *s;
@@ -25,13 +26,14 @@ int main(){
     for(int i=0;i<15;i++){
         StackPush(s,i);
     }
+    printf("num: %d\n",StackLen(s));
 	printf(" ***** Pop ***** \n");
 	ElemType  p;
-	for(int i=0;i<10;i++){
+	for(int i=0;i<15;i++){
        StackPop(s,&p);
 	   printf("%d \n",p);
     }
-
+    printf("num: %d\n",StackLen(s));
 	free(s);
 	s=NULL;
     return 0;
@@ -71,4 +73,8 @@ void StackDestroy(sqStack *s){
     }
     s->base=s->top=NULL;
     s->stacksize=0;
+}
+
+int StackLen(sqStack *s){
+    return (s->top-s->base);
 }
