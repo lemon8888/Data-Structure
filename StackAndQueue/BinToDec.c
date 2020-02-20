@@ -37,6 +37,8 @@ int main(){
         StackPop(s,&bin);
         sum+=(bin-48)*pow(2,i);
     }
+    free(s);
+	s=NULL;
     printf("十进制为:%d\n",sum);
     return 0;
 }
