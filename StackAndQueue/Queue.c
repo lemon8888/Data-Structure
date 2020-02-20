@@ -1,4 +1,4 @@
-//队列
+//链队列
 #include <stdio.h>
 #include <stdlib.h>
 
