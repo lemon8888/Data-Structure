@@ -5,7 +5,7 @@
 #define Stack_Init_Size 10
 #define Stack_Increment 10
 
-typedef char ElemType;
+typedef int ElemType;
 
 typedef struct {
     ElemType *top;
