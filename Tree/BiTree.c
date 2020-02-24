@@ -8,7 +8,7 @@ typedef struct BiTNode{
 }BiTNode,*BiTree;
 
 //建立树节点
-void CreatBiTree(BiTree *T){
+void CreateBiTree(BiTree *T){
     char c;
     scanf("%c",&c);
     if(' '==c){
@@ -16,8 +16,8 @@ void CreatBiTree(BiTree *T){
     }else{
         *T=(BiTNode *)malloc(sizeof(BiTNode));
         (*T)->data=c;
-        CreatBiTree(&(*T)->lchild);
-        CreatBiTree(&(*T)->rchild);
+        CreateBiTree(&(*T)->lchild);
+        CreateBiTree(&(*T)->rchild);
     }
 }
 
@@ -38,7 +38,7 @@ void PreOderTraversal(BiTree T,int level){
 int main(){
     int level=1;
     BiTree T=NULL;
-    CreatBiTree(&T);
+    CreateBiTree(&T);
     PreOderTraversal(T,level);
     return 0;
 }
