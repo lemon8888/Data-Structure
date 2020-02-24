@@ -7,6 +7,7 @@ typedef struct BiTNode{
     struct BiTNode *lchild, *rchild;
 }BiTNode,*BiTree;
 
+//建立树节点
 void CreatBiTree(BiTree *T){
     char c;
     scanf("%c",&c);
@@ -20,10 +21,12 @@ void CreatBiTree(BiTree *T){
     }
 }
 
+//取数据
 void Visit(char c,int level){
     printf("%c位于第%d层\n",c,level);
 }
 
+//前序遍历
 void PreOderTraversal(BiTree T,int level){
     if(T){
         Visit(T->data,level);
