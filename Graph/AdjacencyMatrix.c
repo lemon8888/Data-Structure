@@ -9,7 +9,6 @@ typedef struct GraphAdjMatrix{
     int numVertexes,numEdges;
 }GraphAdjMatrix;
 
-
 void CreateMGraph(GraphAdjMatrix *G){
     int i,j,k;
     printf("请输入图的顶点数及边数：");
