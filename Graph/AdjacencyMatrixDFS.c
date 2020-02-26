@@ -1,4 +1,4 @@
-//深度优先遍历
+//邻接矩阵深度优先遍历
 #include<stdio.h>
 #include<stdlib.h>
 
