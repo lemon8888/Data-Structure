@@ -25,7 +25,7 @@ void CreateMGraph(GraphAdjMatrix *G){
         }
     }
     printf("请输入图的边信息：\n");
-    for(k=0;k<G->numVertexes;k++){
+    for(k=0;k<G->numEdges;k++){
         printf("请输入图第%d条边的序号：",k+1);
         scanf("%d %d",&i,&j);
         G->adjm[i][j]=1;
