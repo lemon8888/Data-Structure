@@ -55,7 +55,7 @@ void QueueGet(QueueLink *s,ElemType *e){
     *e=p->data;
     if(p==s->rear){
         s->rear=s->front;
-        s->front=NULL;
+        s->front->next=NULL;
     }else{
         s->front->next=p->next;
     }
