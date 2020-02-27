@@ -48,20 +48,6 @@ void CreateALGraph(GraphAdjList *L){
     }
 }
 
-void NodeGet(GraphAdjList *L,int i,EdgeNode **p){
-    if(!L->adjList[i].first){
-        exit(0);
-    }
-    do{
-        if(!L->adjList[i].first){
-            *p=NULL;
-        }else{
-            *p=L->adjList[i].first;
-        L->adjList[i].first=(*p)->next;
-        }
-    }while(visited[(*p)->adjvex]);
-}
-
 void Traverse(GraphAdjList *L){
     printf("邻接表：\n");
     int i;
